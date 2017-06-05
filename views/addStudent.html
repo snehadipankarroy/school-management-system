@@ -1,0 +1,45 @@
+<div ng-controller="addStudentController">
+	<h1>Add Student Form</h1>
+	<form>
+		<div>
+			<label>Select Class</label>
+			<select name="multipleSelect" id="multipleSelect" ng-model="data.multipleSelect">
+				<option ng-repeat="class in classes" value="{{class.id}}">{{class.name}}</option>
+			</select><br /><br />
+		</div>
+		<div>
+			<label>Student Name</label>
+			<div>
+				<input type="t ext" ng-model="studentName" />
+			</div>
+		</div> 
+		<div>
+			<label>Student Age</label>
+			<div>
+				<input type="text" ng-model="age" />
+			</div>
+		</div>
+		<div>
+			<label>Computer Science Marks</label>
+			<div>
+				<input type="text" ng-model="subject1" />
+			</div>
+		</div>
+		<div>
+			<label>Biology Marks</label>
+			<div>
+				<input type="text" ng-model="subject2" />
+			</div>
+		</div>
+		<div>
+			<label>Chemistry Marks</label>
+			<div>
+				<input type="text" ng-model="subject3" />
+			</div>
+		</div>
+		<br />
+		<div>
+			<button ng-click="addStudent()">Add Student</button>
+		</div>
+	</form>
+</div>

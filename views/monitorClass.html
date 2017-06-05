@@ -1,0 +1,52 @@
+<div ng-controller="monitorClassController">
+	<h1>Monitor Class Form</h1>
+	<div>
+		<label>Select Class</label>
+		<select ng-change="change()" ng-model="classId">
+			<option ng-repeat="class in classes">{{class.id}}</option>
+		</select><br /><br />
+	</div>
+	<div>
+		<label>Student Name</label>
+		<select ng-model="stuName">
+			<option ng-repeat="x in studentNames">{{x.studentName}}</option>
+		</select><br /><br />
+	</div>
+	<br />
+	<div>
+		<label>Student Age</label>
+		<div>
+			<input type="text" ng-model="age" />
+		</div>
+	</div>
+	<br />
+	<div>
+		<label>Computer Science Marks</label>
+		<div>
+			<input type="text" ng-model="subject1" />
+		</div>
+	</div>
+	<br />
+	<div>
+		<label>Biology Marks</label>
+		<div>
+			<input type="text" ng-model="subject2" />
+		</div>
+	</div>
+	<br />
+	<div>
+		<label>Chemistry Marks</label>
+		<div>
+			<input type="text" ng-model="subject3" />
+		</div>
+	</div>
+	<br />
+	<div>
+		<label>Average</label>
+		<div>
+			<input type="text" ng-model="avg" />
+		</div>
+	</div>
+	<br />
+	<button ng-click="fetch()">Get student information</button>
+</div>
